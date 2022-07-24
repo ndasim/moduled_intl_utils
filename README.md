@@ -1,13 +1,10 @@
 ## Intl Utils
 
-[![pub package](https://img.shields.io/pub/v/intl_utils.svg)](https://pub.dev/packages/intl_utils)
-[![Twitter Follow](https://img.shields.io/twitter/follow/localizely?label=Follow%20us&style=social)](https://twitter.com/intent/follow?screen_name=localizely)
+THIS PACKAGE FORKED FROM https://github.com/localizely/intl_utils FOR CLI USAGE OF MULTIPLE MODULES
 
 Dart package that creates a binding between your translations from .arb files and your Flutter app. It generates boilerplate code for official Dart Intl library and adds auto-complete for keys in Dart code.
 
 ## Usage
-
-You can use this package directly (i.e. for Continuous Integration tools or via CLI) or leave it to [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl) or [IntelliJ/Android Studio](https://plugins.jetbrains.com/plugin/13666-flutter-intl) plugins to run it automatically whenever you modify ARB files.
 
 Follow these steps to get started:
 
@@ -16,7 +13,7 @@ Follow these steps to get started:
 Add package configuration to your `pubspec.yaml` file. Here is a full configuration for the package:
 
 <pre>
-flutter_intl:
+#moduleName_flutter_intl:
   <b>enabled: true</b> # Required. Must be set to true to activate the package. Default: false
   class_name: S # Optional. Sets the name for the generated localization class. Default: S
   main_locale: en # Optional. Sets the main locale used for generating localization files. Provided value should consist of language code and optional script and country codes separated with underscore (e.g. 'en', 'en_GB', 'zh_Hans', 'zh_Hans_CN'). Default: en
