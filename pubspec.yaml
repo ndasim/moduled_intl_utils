@@ -1,7 +1,7 @@
-name: moduled_int_utils
-description: moduled_int_utils is a dart library that generates Dart localization code from ARB file for multiple modules. Generated code relies on Intl library. Forked from https://github.com/localizely/intl_utils
+name: moduled_intl_utils
+description: moduled_intl_utils is a dart library that generates Dart localization code from ARB file for multiple modules. Generated code relies on Intl library. Forked from https://github.com/localizely/intl_utils
 version: 2.7.0
-homepage: https://github.com/localizely/moduled_int_utils
+homepage: https://github.com/localizely/moduled_intl_utils
 
 environment:
   sdk: ">=2.14.0 <3.0.0"

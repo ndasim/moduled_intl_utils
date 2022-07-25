@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:args/args.dart' as args;
 
@@ -20,10 +21,10 @@ class Generator {
   late bool _useDeferredLoading;
   late bool _otaEnabled;
 
-  final argParser = args.ArgParser();
-
   /// Creates a new generator with configuration from the 'pubspec.yaml' file.
-  Generator() {
+  Generator(List<String> arguments) {
+    final argParser = args.ArgParser();
+
     String? moduleName;
     argParser
       ..addFlag(
@@ -35,10 +36,18 @@ class Generator {
       )
       ..addOption(
         'module-name',
-        help: 'Localizely project ID.',
+        help: 'Module name.',
         callback: ((x) => moduleName = x),
         defaultsTo: null,
       );
+
+    final argResults = argParser.parse(arguments);
+    if (argResults['help'] == true) {
+      stdout.writeln(argParser.usage);
+      exit(0);
+    }
+
+    stdout.writeln("Generating for ${moduleName}_flutter_intl");
 
     var pubspecConfig = PubspecConfig(moduleName: moduleName);
 
